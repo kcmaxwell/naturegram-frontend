@@ -3,17 +3,19 @@ import Axios from 'axios';
 
 function Register() {
   const [registerUsername, setRegisterUsername] = useState('');
-    const [registerPassword, setRegisterPassword] = useState('');
+  const [registerPassword, setRegisterPassword] = useState('');
 
     const register = () => {
         Axios({
           method: 'POST',
           data: {
             username: registerUsername,
-            password: registerPassword
+            password: registerPassword,
+            first_name: 'Test',
+            last_name: 'User'
           },
           withCredentials: true,
-          url: process.env.REACT_APP_LOCAL_SERVER + '/register',
+          url: process.env.REACT_APP_LOCAL_SERVER + '/api/auth/register',
         }).then((res) => console.log(res));
       };
 

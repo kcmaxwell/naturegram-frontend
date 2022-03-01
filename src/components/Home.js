@@ -12,7 +12,7 @@ function Home() {
         Axios({
           method: 'GET',
           withCredentials: true,
-          url: process.env.REACT_APP_LOCAL_SERVER + '/user',
+          url: process.env.REACT_APP_LOCAL_SERVER + '/api/auth/user',
         }).then((res) => {
           // only set data if it is non-null
           if (res.data)
@@ -23,7 +23,7 @@ function Home() {
         Axios({
           method: 'POST',
           withCredentials: true,
-          url: process.env.REACT_APP_LOCAL_SERVER + '/logout',
+          url: process.env.REACT_APP_LOCAL_SERVER + '/api/auth/logout',
         }).then((res) => console.log(res));
         setData(null);
       };

@@ -13,7 +13,7 @@ function Login() {
         password: loginPassword
       },
       withCredentials: true,
-      url: process.env.REACT_APP_LOCAL_SERVER + '/login',
+      url: process.env.REACT_APP_LOCAL_SERVER + '/api/auth/login',
     }).then((res) => console.log(res));
   };
 
