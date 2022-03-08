@@ -29,7 +29,7 @@ function Home() {
       };
 
     return (
-        <div className="App">
+        <div className="Home">
           <div>
             <h1>Get User</h1>
             <button onClick={getUser}>Submit</button>
